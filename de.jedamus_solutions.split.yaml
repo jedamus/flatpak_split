@@ -1,0 +1,20 @@
+id: de.jedamus_solutions.split
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+command: am_split
+modules:
+  - name: popt
+    sources:
+      - type: archive
+        url: https://ftp.osuosl.org/pub/rpm/popt/releases/popt-1.x/popt-1.19.tar.gz
+        sha256: c25a4838fc8e4c1c8aacb8bd620edb3084a3d63bf8987fdad3ca2758c63240f9
+  - name: am_split
+    buildsystem: autotools
+    no-autogen: false
+    sources:
+      - type: archive
+        path: src/am_split-1.2.tar.gz
+finish-args:
+  - --filesystem=host:rw
+  - --filesystem=/tmp:rw

@@ -1,0 +1,7 @@
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.freedesktop.Platform//23.08 org.freedesktop.Sdk//23.08
+
+cd ~flatpak/split
+flatpak-builder build de.jedamus_solutions.split.yaml
+flatpak-builder --user --install build --force-clean de.jedamus_solutions.split.yaml
+flatpak run de.jedamus_solutions.split
