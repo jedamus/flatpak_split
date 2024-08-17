@@ -1,6 +1,6 @@
 # flatpak split
 
-This is the split program as flatpak 
+This is the split program as a flatpak package
 
 ## Getting started
 
